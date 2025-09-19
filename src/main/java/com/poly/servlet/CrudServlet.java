@@ -25,13 +25,13 @@ public class CrudServlet extends HttpServlet {
 		String uri = req.getRequestURI();
 		
 		if (uri.contains("/create")) {
-            out.println("👉 Bạn đang gọi chức năng TẠO MỚI");
+            out.println("Bạn đang gọi chức năng TẠO MỚI");
         } else if (uri.contains("/update")) {
-            out.println("👉 Bạn đang gọi chức năng CẬP NHẬT");
+            out.println("Bạn đang gọi chức năng CẬP NHẬT");
         } else if (uri.contains("/delete")) {
-            out.println("👉 Bạn đang gọi chức năng XÓA");
+            out.println("Bạn đang gọi chức năng XÓA");
         } else if (uri.contains("/edit/2024")) {
-            out.println("👉 Bạn đang gọi chức năng CHỈNH SỬA với năm 2024");
+            out.println("Bạn đang gọi chức năng CHỈNH SỬA với năm 2024");
         } else {
             out.println("Không tìm thấy chức năng!");
         }
