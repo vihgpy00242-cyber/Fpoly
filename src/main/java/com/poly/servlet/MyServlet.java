@@ -11,21 +11,24 @@ import jakarta.servlet.http.HttpServletResponse;
 @WebServlet("/poly/servlet")
 public class MyServlet extends HttpServlet {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
+	@Override
 	public void service(HttpServletRequest req, HttpServletResponse resp)
 	throws ServletException, IOException {
 		String method = req.getMethod();
 		System.out.println(method);
 	}
+	@Override
 	public void doGet(HttpServletRequest req, HttpServletResponse resp)
 	throws ServletException, IOException {
 		System.out.println("GET");
 	}
+	@Override
 	public void doPost(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
 				System.out.println("POST");
 			}
-	
+
 }

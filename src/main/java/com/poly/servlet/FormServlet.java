@@ -11,10 +11,11 @@ import jakarta.servlet.http.HttpServletResponse;
 @WebServlet("/form/update")
 public class FormServlet extends HttpServlet {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 
+	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
 		User bean = new User();
@@ -24,7 +25,8 @@ public class FormServlet extends HttpServlet {
 		req.setAttribute("user", bean);
 		req.getRequestDispatcher("/form.jsp").forward(req, resp);
 	}
-	
+
+	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
 		String fullname = req.getParameter("fullname");

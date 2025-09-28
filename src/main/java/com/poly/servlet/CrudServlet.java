@@ -13,17 +13,18 @@ import jakarta.servlet.http.HttpServletResponse;
 
 public class CrudServlet extends HttpServlet {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 
+	@Override
 	public void service(HttpServletRequest req, HttpServletResponse resp)
 	throws ServletException, IOException {
-		
+
 		resp.setContentType("text/html;charset=UTF-8");
         PrintWriter out = resp.getWriter();
 		String uri = req.getRequestURI();
-		
+
 		if (uri.contains("/create")) {
             out.println("Bạn đang gọi chức năng TẠO MỚI");
         } else if (uri.contains("/update")) {
@@ -35,7 +36,7 @@ public class CrudServlet extends HttpServlet {
         } else {
             out.println("Không tìm thấy chức năng!");
         }
-	
+
 
 
 	}

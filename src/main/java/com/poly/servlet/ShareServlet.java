@@ -12,7 +12,7 @@ import jakarta.servlet.http.HttpServletResponse;
 @WebServlet("/share")
 public class ShareServlet extends HttpServlet{
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 @Override
